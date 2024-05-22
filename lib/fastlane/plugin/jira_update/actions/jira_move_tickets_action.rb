@@ -124,7 +124,7 @@ module Fastlane
         [
           '
           gym
-          slack(message: "Done")'
+          slack(message: "Done")
           jira_move_tickets(
             url: "https://jira.yourdomain.com",
             username: "Username",
@@ -132,6 +132,7 @@ module Fastlane
             ticket: "ABC-123",
             target: "Done"
           )
+          '
         ]
       end
 
