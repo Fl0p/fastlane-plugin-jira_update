@@ -1,0 +1,9 @@
+lane :test do
+  jira_move_tickets(
+    username: "user",
+    password: "123",
+    url:      "https://jira.example.com",
+    project:  "APP",
+  )
+
+end
