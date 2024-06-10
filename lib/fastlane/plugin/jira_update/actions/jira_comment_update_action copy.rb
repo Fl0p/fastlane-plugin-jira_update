@@ -14,9 +14,9 @@ module Fastlane
         )
 
         ticket = params[:ticket]
-        search = params[:search]
+        search = params[:comment_search]
         username = params[:username]
-        comment = params[:comment]
+        comment = params[:comment_text]
         update_comment = params[:update_comment] || false
         fail_if_not_found = params[:fail_if_not_found] || false
 
@@ -118,12 +118,12 @@ module Fastlane
                                        type: String,
                                        optional: true,
                                        default_value: nil),
-          FastlaneCore::ConfigItem.new(key: :search,
+          FastlaneCore::ConfigItem.new(key: :comment_search,
                                        description: "Jira comment text to find",
                                        type: String,
                                        optional: true,
                                        default_value: nil),
-          FastlaneCore::ConfigItem.new(key: :comment,
+          FastlaneCore::ConfigItem.new(key: :comment_text,
                                        description: "Jira comment text to add",
                                        type: String,
                                        default_value: "comment"),

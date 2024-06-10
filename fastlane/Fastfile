@@ -16,8 +16,8 @@ lane :test_jira_comment_update do
     password: ENV["FL_JIRA_PASSWORD"],
     url:  ENV["FL_JIRA_SITE"],
     ticket: "APP-13601",
-    search: "Test comment",
-    comment: "Test comment replaced 3",
+    comment_search: "Comment",
+    comment_text : "Comment updated",
     update_comment: true,
     fail_if_not_found: false,
   )
