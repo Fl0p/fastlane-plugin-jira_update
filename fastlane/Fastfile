@@ -1,9 +1,24 @@
-lane :test do
+desc "Test JIRA move tickets"
+lane :test_jira_move_tickets do
   jira_move_tickets(
-    username: "user",
-    password: "123",
-    url:      "https://jira.example.com",
-    project:  "APP",
+    username: ENV["FL_JIRA_USERNAME"],
+    password: ENV["FL_JIRA_PASSWORD"],
+    url:  ENV["FL_JIRA_SITE"],
+    ticket: "APP-1234",
+    target: "Done",
   )
+end
 
+desc "Test JIRA comment update"
+lane :test_jira_comment_update do
+  jira_comment_update(
+    username: ENV["FL_JIRA_USERNAME"],
+    password: ENV["FL_JIRA_PASSWORD"],
+    url:  ENV["FL_JIRA_SITE"],
+    ticket: "APP-13601",
+    search: "Test comment",
+    comment: "Test comment replaced 3",
+    update_comment: true,
+    fail_if_not_found: false,
+  )
 end
