@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-jira_update'
   spec.version       = Fastlane::JiraUpdate::VERSION
   spec.author        = 'Flop Butylkin'
-  spec.email         = 'flop@hackerspace.by'
+  spec.email         = 'flopspm@gmail.com'
 
   spec.summary       = 'JIRA update actions'
   spec.homepage      = "https://github.com/"
