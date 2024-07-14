@@ -9,6 +9,17 @@ lane :test_jira_move_tickets do
   )
 end
 
+desc "Test JIRA get ticket"
+lane :test_jira_get_ticket do
+  ticket = jira_get_ticket(
+    username: ENV["FL_JIRA_USERNAME"],
+    password: ENV["FL_JIRA_PASSWORD"],
+    url:  ENV["FL_JIRA_SITE"],
+    ticket: "APP-13601",
+  )
+  UI.message("JIRA ticket: '#{ticket[:summary]}'")
+end
+
 desc "Test JIRA comment update"
 lane :test_jira_comment_update do
   jira_comment_update(
@@ -17,7 +28,7 @@ lane :test_jira_comment_update do
     url:  ENV["FL_JIRA_SITE"],
     ticket: "APP-13601",
     comment_search: "Comment",
-    comment_text : "Comment updated",
+    comment_text: "Comment updated",
     update_comment: true,
     fail_if_not_found: false,
   )
