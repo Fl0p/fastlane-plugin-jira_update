@@ -33,3 +33,11 @@ lane :test_jira_comment_update do
     fail_if_not_found: false,
   )
 end
+
+
+desc "Test QR code generation"
+lane :test_ansi_qr_code do
+  ansi_qr_code(
+    text: "https://www.google.com",
+  )
+end

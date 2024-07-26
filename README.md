@@ -12,8 +12,11 @@ fastlane add_plugin jira_update
 
 ## About jira_update
 
-Update JIRA tickets status
-
+Plugin provided multiple actions to update JIRA
+- get ticket information 'jira_get_ticket'
+- move tickets to a specific status 'jira_move_tickets'
+- add/delete/replace comment to a ticket 'jira_update_comment'
+- generate QR code ascii art and image link 'jira_update_qr_code'
 
 ## Example
 

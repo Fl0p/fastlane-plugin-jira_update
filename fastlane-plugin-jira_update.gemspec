@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.author        = 'Flop Butylkin'
   spec.email         = 'flopspm@gmail.com'
 
-  spec.summary       = 'JIRA update actions'
-  spec.homepage      = "https://github.com/"
+  spec.summary       = 'JIRA update actions (comment, move tickets, get ticket info)'
+  spec.homepage      = "https://github.com/Fl0p/fastlane-plugin-jira_update"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   # since this would cause a circular dependency
 
   spec.add_dependency 'jira-ruby', '~> 2.3.0'
+  spec.add_dependency 'rqrcode', '~> 2.2.0'
 
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'bundler'
